@@ -16,5 +16,16 @@ export default {
 .App {
   color: $red;
   font-size: 32px;
+  img {
+    animation: run 3s ease-in-out both;
+  }
+  @keyframes run {
+    from {
+      transform: translate(0)
+    }
+    to {
+      transform: translate(100px)
+    }
+  }
 }
 </style>
