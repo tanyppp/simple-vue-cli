@@ -20,8 +20,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json', '.css', '.scss', '.less'],
     alias: {
-      "@": SourcePath,
-      vue: path.resolve(RootPath, './node_modules/vue/dist/vue.js')
+      "@": SourcePath
     }
   },
   module: {
