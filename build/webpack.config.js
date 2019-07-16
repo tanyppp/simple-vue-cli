@@ -50,7 +50,8 @@ module.exports = {
                 loose: true
               }],
               '@babel/plugin-transform-runtime',
-              '@babel/plugin-syntax-dynamic-import'
+              '@babel/plugin-syntax-dynamic-import',
+              'transform-vue-jsx'
             ]
           }
         }

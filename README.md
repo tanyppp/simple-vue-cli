@@ -20,3 +20,4 @@ npm run build
 - 用于构建单页应用的vue脚手架
 - 可使用scss语法
 - 具有热重载功能
+- 在render函数中可使用jsx语法
