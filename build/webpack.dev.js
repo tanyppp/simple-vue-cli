@@ -19,6 +19,7 @@ const devConfig = smart(baseConfig, {
     filename: 'js/bundle.[name].js',
     chunkFilename: 'js/bundle.[id].js'
   },
+  devtool: 'eval-source-map',
   devServer: {
     historyApiFallback: {
       rewrites: [{

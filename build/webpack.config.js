@@ -13,10 +13,10 @@ const {
 } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const WebpackDeepScopeAnalysisPlugin = require('webpack-deep-scope-plugin').default;
 
 module.exports = {
   entry: path.join(SourcePath, 'main.js'),
-  devtool: 'eval-source-map',
   resolve: {
     extensions: ['.js', '.vue', '.json', '.css', '.scss', '.less'],
     alias: {
@@ -62,7 +62,7 @@ module.exports = {
         include: SourcePath,
         use: {
           loader: 'eslint-loader',
-          options: { // 这里的配置项参数将会被传递到 eslint 的 CLIEngine 
+          options: { // 这里的配置项参数将会被传递到 eslint 的 CLIEngine
             formatter: require('eslint-friendly-formatter') // 指定错误报告的格式规范
           }
         }
@@ -82,6 +82,7 @@ module.exports = {
     new CopyWebpackPlugin([{
       from: StaticPath,
       to: DistPath
-    }])
+    }]),
+    new WebpackDeepScopeAnalysisPlugin()
   ]
 }
